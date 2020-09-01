@@ -1,6 +1,7 @@
 import React from 'react'
 import Note from './Note'
 
+
 export default function NotePage(props) {
     return (
         <div className="notePage">
@@ -10,7 +11,7 @@ export default function NotePage(props) {
             modified={props.note.modified} 
             />
             <div className="note__content">
-                {props.note.content.map((info, i) => 
+                {props.note.content.split(/\n \r|\n/).map((info, i) => 
                     <p key={i}>{info}</p>
 
                 )}
